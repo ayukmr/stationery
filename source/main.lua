@@ -1,7 +1,7 @@
-import 'CoreLibs/graphics'
-import 'CoreLibs/timer'
+import "CoreLibs/graphics"
+import "CoreLibs/timer"
 
-import 'game'
+import "game"
 
 local pd  <const> = playdate
 local gfx <const> = pd.graphics

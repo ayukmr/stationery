@@ -1,9 +1,9 @@
-import 'CoreLibs/object'
-import 'CoreLibs/graphics'
-import 'CoreLibs/sprites'
-import 'CoreLibs/timer'
+import "CoreLibs/object"
+import "CoreLibs/graphics"
+import "CoreLibs/sprites"
+import "CoreLibs/timer"
 
-import 'bullet'
+import "bullet"
 
 local pd  <const> = playdate
 local gfx <const> = pd.graphics
@@ -11,7 +11,7 @@ local gfx <const> = pd.graphics
 local tileSize <const> = 32
 
 -- tile
-class('Tile').extends()
+class("Tile").extends()
 
 -- create new tile
 function Tile:init(posX, posY, health, imagePath)
@@ -88,11 +88,11 @@ function Tile:updateHook() end
 function Tile:removeHook() end
 
 -- pencil tile
-class('PencilTile').extends(Tile)
+class("PencilTile").extends(Tile)
 
 -- create new pencil tile
 function PencilTile:init(posX, posY)
-    PencilTile.super.init(self, posX, posY, 5, 'images/tiles/pencil')
+    PencilTile.super.init(self, posX, posY, 5, "images/tiles/pencil")
 
     self.bullets = {}
 
@@ -132,19 +132,19 @@ function PencilTile:removeHook()
 end
 
 -- eraser tile
-class('ErasersTile').extends(Tile)
+class("ErasersTile").extends(Tile)
 
 -- create new eraser tile
 function ErasersTile:init(posX, posY)
-    ErasersTile.super.init(self, posX, posY, 10, 'images/tiles/erasers')
+    ErasersTile.super.init(self, posX, posY, 10, "images/tiles/erasers")
 end
 
 -- pens tile
-class('PensTile').extends(Tile)
+class("PensTile").extends(Tile)
 
 -- create new pens tile
 function PensTile:init(posX, posY)
-    PensTile.super.init(self, posX, posY, 10, 'images/tiles/pens')
+    PensTile.super.init(self, posX, posY, 10, "images/tiles/pens")
 
     self.bullets = {}
 

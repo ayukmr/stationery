@@ -1,15 +1,15 @@
-import 'CoreLibs/object'
-import 'CoreLibs/graphics'
-import 'CoreLibs/sprites'
+import "CoreLibs/object"
+import "CoreLibs/graphics"
+import "CoreLibs/sprites"
 
-import 'card'
-import 'tile'
+import "card"
+import "tile"
 
 local pd  <const> = playdate
 local gfx <const> = pd.graphics
 
 -- cards
-class('Cards').extends()
+class("Cards").extends()
 
 -- create cards
 function Cards:init()
@@ -19,7 +19,7 @@ function Cards:init()
     self.waiting = false
 
     -- create overlay
-    local image  = images:get('images/overlay')
+    local image  = images:get("images/overlay")
     self.overlay = gfx.sprite.new(image)
 
     local width, height = self.overlay:getSize()
@@ -50,7 +50,7 @@ function Cards:init()
 
     -- draw card slots
     gfx.sprite.setBackgroundDrawingCallback(function()
-        local slotImage     = images:get('images/cards/slot')
+        local slotImage     = images:get("images/cards/slot")
         local width, height = slotImage:getSize()
 
         for x = 0, 11 do
@@ -91,9 +91,9 @@ end
 -- add card
 function Cards:addCard()
     local cards = {
-        { image = 'images/cards/pencil',  tile = PencilTile,  waitTime = 1000 },
-        { image = 'images/cards/erasers', tile = ErasersTile, waitTime = 2000 },
-        { image = 'images/cards/pens',    tile = PensTile,    waitTime = 2000 },
+        { image = "images/cards/pencil",  tile = PencilTile,  waitTime = 1000 },
+        { image = "images/cards/erasers", tile = ErasersTile, waitTime = 2000 },
+        { image = "images/cards/pens",    tile = PensTile,    waitTime = 2000 },
     }
 
     local card = cards[math.random(#cards)]

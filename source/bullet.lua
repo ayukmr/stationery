@@ -1,6 +1,6 @@
-import 'CoreLibs/object'
-import 'CoreLibs/graphics'
-import 'CoreLibs/sprites'
+import "CoreLibs/object"
+import "CoreLibs/graphics"
+import "CoreLibs/sprites"
 
 local pd  <const> = playdate
 local gfx <const> = pd.graphics
@@ -8,14 +8,14 @@ local gfx <const> = pd.graphics
 local tileSize <const> = 32
 
 -- bullet
-class('Bullet').extends()
+class("Bullet").extends()
 
 -- create bullet
 function Bullet:init(posX, posY, dirX, dirY)
     self.dirX = dirX
     self.dirY = dirY
 
-    local image = images:get('images/bullet')
+    local image = images:get("images/bullet")
     self.sprite = gfx.sprite.new(image)
 
     self.sprite:setTag(2)

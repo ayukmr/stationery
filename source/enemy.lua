@@ -1,6 +1,6 @@
-import 'CoreLibs/object'
-import 'CoreLibs/graphics'
-import 'CoreLibs/sprites'
+import "CoreLibs/object"
+import "CoreLibs/graphics"
+import "CoreLibs/sprites"
 
 local pd  <const> = playdate
 local gfx <const> = pd.graphics
@@ -8,7 +8,7 @@ local gfx <const> = pd.graphics
 local tileSize <const> = 32
 
 -- enemy
-class('Enemy').extends()
+class("Enemy").extends()
 
 -- create enemy
 function Enemy:init(posY, health, speed)
@@ -18,7 +18,7 @@ function Enemy:init(posY, health, speed)
     self.invincible = false
 
     -- create sprite
-    local image = images:get('images/enemy')
+    local image = images:get("images/enemy")
     self.sprite = gfx.sprite.new(image)
 
     self.sprite:setTag(3)

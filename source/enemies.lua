@@ -1,10 +1,10 @@
-import 'CoreLibs/object'
-import 'enemy'
+import "CoreLibs/object"
+import "enemy"
 
 local pd <const> = playdate
 
 -- enemies
-class('Enemies').extends()
+class("Enemies").extends()
 
 -- create enemies
 function Enemies:init()

@@ -1,6 +1,6 @@
-import 'CoreLibs/object'
-import 'CoreLibs/graphics'
-import 'CoreLibs/sprites'
+import "CoreLibs/object"
+import "CoreLibs/graphics"
+import "CoreLibs/sprites"
 
 local pd  <const> = playdate
 local gfx <const> = pd.graphics
@@ -8,7 +8,7 @@ local gfx <const> = pd.graphics
 local tileSize <const> = 32
 
 -- tiles
-class('Tiles').extends()
+class("Tiles").extends()
 
 -- create tiles
 function Tiles:init()
@@ -16,7 +16,7 @@ function Tiles:init()
     self.selectedTile = { x = 1, y = 1 }
 
     -- tile selector
-    local selectorImage = images:get('images/selector')
+    local selectorImage = images:get("images/selector")
     self.selector = gfx.sprite.new(selectorImage)
 
     self:moveSelector()
@@ -24,7 +24,7 @@ function Tiles:init()
 
     -- draw background tiles
     gfx.sprite.setBackgroundDrawingCallback(function()
-        local backgroundImage = images:get('images/tiles/background')
+        local backgroundImage = images:get("images/tiles/background")
 
         for y = 0, 5 do
             for x = 0, 12 do

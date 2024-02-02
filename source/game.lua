@@ -1,18 +1,18 @@
-import 'CoreLibs/object'
+import "CoreLibs/object"
 
-import 'images'
+import "images"
 
 images = Images()
 
-import 'tiles'
-import 'cards'
-import 'enemies'
+import "tiles"
+import "cards"
+import "enemies"
 
 local pd  <const> = playdate
 local gfx <const> = pd.graphics
 
 -- game
-class('Game').extends()
+class("Game").extends()
 
 -- create game
 function Game:init()

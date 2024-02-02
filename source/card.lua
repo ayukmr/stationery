@@ -1,12 +1,12 @@
-import 'CoreLibs/object'
-import 'CoreLibs/graphics'
-import 'CoreLibs/sprites'
+import "CoreLibs/object"
+import "CoreLibs/graphics"
+import "CoreLibs/sprites"
 
 local pd  <const> = playdate
 local gfx <const> = pd.graphics
 
 -- card
-class('Card').extends()
+class("Card").extends()
 
 -- create card
 function Card:init(index, imagePath, tile, waitTime)

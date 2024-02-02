@@ -1,11 +1,11 @@
-import 'CoreLibs/object'
-import 'CoreLibs/graphics'
+import "CoreLibs/object"
+import "CoreLibs/graphics"
 
 local pd  <const> = playdate
 local gfx <const> = pd.graphics
 
 -- image loader
-class('Images').extends()
+class("Images").extends()
 
 -- create image loader
 function Images:init()
